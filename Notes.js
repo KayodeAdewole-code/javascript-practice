@@ -10,4 +10,15 @@ let age=10;
 let numOfSlices=8;
 let name="Kayode";
 let favPlayer="My favourite player is Cole Palmer";
-let itRainToday=True;
+let itRainToday= true;
+
+
+
+// operators: main ones= + , -, *, /, %,
+let x=10;
+let y=2;
+let z=x-y;
+console.log(z)
+let c=4;
+let d=x%c;
+console.log(d)
