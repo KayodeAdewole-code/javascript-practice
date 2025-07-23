@@ -18,7 +18,12 @@ let itRainToday= true;
 let x=10;
 let y=2;
 let z=x-y;
-console.log(z)
+console.log(z);
 let c=4;
 let d=x%c;
-console.log(d)
+console.log(d);
+
+// % gives you what's left after you divide (remainder)
+let g = 25;
+let h = 5;
+console.log(g/h);
