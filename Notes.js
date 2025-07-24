@@ -27,3 +27,5 @@ console.log(d);
 let g = 25;
 let h = 5;
 console.log(g/h);
+console.log(g*h);
+console.log((g+h)*h);
