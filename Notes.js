@@ -13,7 +13,6 @@ let favPlayer="My favourite player is Cole Palmer";
 let itRainToday= true;
 
 
-
 // operators: main ones= + , -, *, /, %,
 let x=10;
 let y=2;
@@ -29,3 +28,5 @@ let h = 5;
 console.log(g/h);
 console.log(g*h);
 console.log((g+h)*h);
+
+const names = ["James", "John", "Earling"];
