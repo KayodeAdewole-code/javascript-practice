@@ -30,3 +30,4 @@ console.log(g*h);
 console.log((g+h)*h);
 
 const names = ["James", "John", "Earling"];
+const carBrands = ["BMW", "Audi", "Toyota", "Nissan"];
