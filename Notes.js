@@ -31,3 +31,11 @@ console.log((g+h)*h);
 
 const names = ["James", "John", "Earling"];
 const carBrands = ["BMW", "Audi", "Toyota", "Nissan"];
+
+let num = 5;
+
+if(num < 6){
+    console.log("Number is less than Six")
+} else {
+    console.log("Number is greater than Six")
+}
