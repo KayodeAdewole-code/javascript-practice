@@ -32,7 +32,7 @@ console.log((g+h)*h);
 const names = ["James", "John", "Earling"];
 const carBrands = ["BMW", "Audi", "Toyota", "Nissan"];
 
-let num = 5;
+let num = 7;
 
 if(num < 6){
     console.log("Number is less than Six")
