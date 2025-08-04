@@ -17,25 +17,57 @@ let itRainToday= true;
 let x=10;
 let y=2;
 let z=x-y;
-console.log(z);
+// console.log(z);
 let c=4;
 let d=x%c;
-console.log(d);
+// console.log(d);
 
 // % gives you what's left after you divide (remainder)
 let g = 25;
 let h = 5;
-console.log(g/h);
-console.log(g*h);
-console.log((g+h)*h);
+// console.log(g/h);
+// console.log(g*h);
+// console.log((g+h)*h);
 
-const names = ["James", "John", "Earling"];
-const carBrands = ["BMW", "Audi", "Toyota", "Nissan"];
 
-let num = 7;
 
-if(num < 6){
-    console.log("Number is less than Six")
-} else {
-    console.log("Number is greater than Six")
+
+
+let num1 = 20;
+let num2 = 15;
+let num3 = 3;
+let num4 = 10;
+
+let answer1 = num1 * num4;
+console.log(answer1)
+let answer2 = num2 - num4;
+console.log(answer2)
+
+//objects = a collection of related propeties 
+// can represent real world objects{people/products/places}
+// object = {} the way its writen is key : value pairs {seperater values with {,}}
+
+const person = {
+    firstName : "kayode",
+    lastName : "Adewole",
+    age : 23,
+    likesGame : true 
 }
+console.log(person.age + 1)
+
+const car = {
+    wheels : 4,
+    doors : 5,
+    seats : 7,
+    carName : "Nissan"
+}
+console.log("the brand of this car " + car.carName)
+
+//array = a veriable like structure that can hold
+// more than 1 value
+// first value is indexed at zero 
+
+let shoes = ["nike", "addids","Puma","Gucci"];
+shoes[4]="LV"
+console.log(shoes[2])
+console.log(shoes)
