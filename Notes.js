@@ -71,3 +71,19 @@ let shoes = ["nike", "addids","Puma","Gucci"];
 shoes[4]="LV"
 console.log(shoes[2])
 console.log(shoes)
+
+let footballPitch = {
+
+player : 11,
+refs : 2,
+goalsInGame : 6,
+isthegameathalftime : false 
+}
+
+let bedroom = {
+
+clothes : 47,
+shoes: 7,
+favItem: 'playstation' ,
+bedInRoom : true
+}
