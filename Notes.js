@@ -87,3 +87,5 @@ shoes: 7,
 favItem: 'playstation' ,
 bedInRoom : true
 }
+
+let favNums = [1,4,5,2,7,9];
