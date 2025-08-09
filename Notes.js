@@ -89,3 +89,13 @@ bedInRoom : true
 }
 
 let favNums = [1,4,5,2,7,9];
+
+let n1 = 9;
+let n2 = 7;
+
+if (n1<n2){
+console.log("number2 is bigger than number 1")
+
+} else{
+    console.log("number1 is bigger than number 2")
+}
