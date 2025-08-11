@@ -99,3 +99,40 @@ console.log("number2 is bigger than number 1")
 } else{
     console.log("number1 is bigger than number 2")
 }
+
+// (if) statements = if a condition is true, execute some code.  if not, do something (else)
+
+let age1 = 17;
+if (age1 <= 11){
+console.log("you are a child" )    
+}
+else if (age1 <= 18){
+console.log("you are a teen")    
+}
+else {
+  console.log("you are an adult")  
+}
+
+let height1 = 177;
+if (height1 <=150){
+console.log("you are short")
+}
+else if(height1 <=180) {
+console.log("you are average")
+}
+else {
+console.log("you are tall")
+}
+
+if (age1 <=18 && height1<=150){
+ console.log("short youth")   
+}
+else if (age1 <=18 && height1 <=180 ){
+    console.log("tall youth")
+}
+else if (age1 > 18 && height1 <= 150){
+    console.log("short adult")
+}
+else if (age1 > 18 && height1 <= 180){
+ console.log("tall adult")
+}
