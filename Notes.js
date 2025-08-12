@@ -124,7 +124,10 @@ else {
 console.log("you are tall")
 }
 
-if (age1 <=18 && height1<=150){
+if(age1 < 0){
+    console.log("You haven't been born yet!")
+}
+else if (age1 <=18 && height1<=150){
  console.log("short youth")   
 }
 else if (age1 <=18 && height1 <=180 ){
