@@ -139,3 +139,38 @@ else if (age1 > 18 && height1 <= 150){
 else if (age1 > 18 && height1 <= 180){
  console.log("tall adult")
 }
+
+
+
+
+let newAge = 15;
+let newHeight = 163;
+
+// Example 1
+if(newAge < 0){
+    console.log("You haven't been born");
+} 
+else if (newAge <= 11){
+    console.log("You are a child");
+} 
+else if (newAge <= 18){
+    console.log("You are a teenager");
+} 
+else {
+    console.log("You are grown up");
+}
+// ------------------------------------------
+// Example 2
+if(newAge < 18 && newHeight >= 183){
+    console.log("You are too young for the rollercoaster but tall enough");
+} else if (newAge >= 18 && newHeight >= 183) {
+    console.log("You are old enough and tall enough for the rollercoaster");
+} else if (newAge >= 18 && newHeight < 183){
+    console.log("You are old enough but not tall enough for the rollercoaster");
+} else if(newAge < 18 && newHeight < 183){
+    console.log("You are not old enough and not tall enough for the rollercoaster");
+}
+ 
+//------------------------------------------
+
+
