@@ -140,9 +140,6 @@ else if (age1 > 18 && height1 <= 180){
  console.log("tall adult")
 }
 
-
-
-
 let newAge = 15;
 let newHeight = 163;
 
@@ -172,5 +169,7 @@ if(newAge < 18 && newHeight >= 183){
 }
  
 //------------------------------------------
+// Methods
 
+console.log(Math.round(4.6));
 
