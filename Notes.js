@@ -169,7 +169,66 @@ if(newAge < 18 && newHeight >= 183){
 }
  
 //------------------------------------------
-// Methods
+// New Examples
 
-console.log(Math.round(4.6));
+let rating = 3.9
+
+if (rating <= 1){
+    console.log("The movie could have been better");
+} else if (rating <= 3){
+    console.log("The movie was alright")
+} else {
+    console.log("The movie was great!");
+}
+
+
+//------------------------------------------ 
+
+const personP = {
+    name: "Tom",
+    age: 27,
+    hasLicense: false
+}
+
+if (personP.age <= 17){
+    console.log("You're too young");
+} else if(personP.age >=18 && personP.hasLicense){
+    console.log("You're over the age limit & can drive");
+} else if (personP.age >=18 && !personP.hasLicense){
+    console.log("You're over the age limit but cannot drive");
+}
+
+// Conditional operators - https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators
+//  > - greater than
+// < - less than
+//  >= - greater than or equal to
+//  <= - less than or equal to
+// ! - Switches true to false & false to true
+// != - not equal to
+// = - assisgnemnt
+// == - equal to
+// === - exactly equal
+// && - AND 
+// || - OR
+
+let englishScore = "50";
+
+if(englishScore === 50){
+    console.log("Good job")
+}
+
+
+let scienceScore = 5;
+
+if(scienceScore != 7){
+    console.log("Nice one")
+}
+
+
+// For loop
+
+// Print numbers 1-5
+// for (let i = 1; i < 6; i++) {
+//     console.log(i);
+// }
 
