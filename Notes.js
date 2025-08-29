@@ -211,7 +211,7 @@ if (personP.age <= 17){
 // && - AND 
 // || - OR
 
-let englishScore = "50";
+let englishScore = "60";
 
 if(englishScore === 50){
     console.log("Good job")
