@@ -232,3 +232,9 @@ if(scienceScore != 7){
 //     console.log(i);
 // }
 
+let boat = {
+    numOfPeople: 25,
+    numOfRooms: 16,
+    CaptainName: "Jeff",
+    hasItLeftDoc: "True"
+}
