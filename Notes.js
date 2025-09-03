@@ -228,9 +228,9 @@ if(scienceScore != 7){
 // For loop
 
 // Print numbers 1-5
-// for (let i = 1; i < 6; i++) {
-//     console.log(i);
-// }
+for (let i = 1; i < 6; i++) {
+    console.log(i);
+}
 
 let boat = {
     numOfPeople: 25,
@@ -238,3 +238,10 @@ let boat = {
     CaptainName: "Jeff",
     hasItLeftDoc: "True"
 }
+
+let food = ["pizza","rice","noodles",5,30];
+
+console.log("i love eating" + food[2], "i eat it" + food[3]);
+
+food[5] = "chowMain";
+// for loops: repeat some code LIMITED amount of times 
