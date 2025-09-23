@@ -245,3 +245,53 @@ console.log("i love eating" + food[2], "i eat it" + food[3]);
 
 food[5] = "chowMain";
 // for loops: repeat some code LIMITED amount of times 
+
+function addNumbers(x,y){
+    let z = x +y;
+    return z
+}
+const num5 = addNumbers(2,4)
+
+console.log(num5)
+
+
+function countryNcity(country,city){
+  console.log("your fvaourite country is " + country)
+  console.log(`your favourite city is ${city}` )  
+}
+countryNcity("france","paris")
+
+const baller = (footballer,club) => { 
+    console.log("the footballer is " + footballer )
+    console.log("the club they play for " + club)
+
+} 
+baller("lamine","barcelona")
+
+function multiplyNumbers(x,y){
+    let m = x * y;
+    return m
+}
+const num6 = multiplyNumbers(6,2)
+
+console.log(num6)
+
+// const age = (ageOfPerson) => {
+// if (ageOfPerson <0)
+//      console.log("not born")
+
+// else if (ageOfPerson <18)
+//      console.log("you are young") 
+
+// else comsole.log("you are old")
+// }
+// age (15)
+
+if (personP.age <= 17){
+    console.log("You're too young");
+} else if(personP.age >=18 && personP.hasLicense){
+    console.log("You're over the age limit & can drive");
+} else if (personP.age >=18 && !personP.hasLicense){
+    console.log("You're over the age limit but cannot drive");
+}
+
