@@ -25,3 +25,4 @@ if(trainers>3){
     console.log("you have less than 3 trainers")
 }
 
+let num6 = 7
