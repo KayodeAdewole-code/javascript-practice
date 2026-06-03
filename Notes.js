@@ -294,4 +294,59 @@ if (personP.age <= 17){
 } else if (personP.age >=18 && !personP.hasLicense){
     console.log("You're over the age limit but cannot drive");
 }
+// if else learning
+let age = parseInt(inp[0]); 
+let has_adult = inp[1] === "true"; 
+
+// Write your code below
+if (age >= 10) {
+    if (age < 13) {
+        if (has_adult) {
+            console.log("You can enter with adult supervision!");
+        } else {
+            console.log("Sorry, you need an adult with you");
+        }
+    } else {
+        console.log("You can enter by yourself!");
+    }
+} else {
+    console.log("Sorry, you are too young");
+}
+
+// learning switches part 1 
+// Get the command from the user
+let command = inp;
+
+let message;
+
+switch (command) {
+   case "start":
+    message = "System starting";
+    break;
+    case "stop":
+    message = "System stopping";
+    break;
+    case "pause":
+    message = "System paused";
+    break;
+    case "resume":
+    message = "System resuming";
+    break;
+    default:
+    message = "Unknown command"
+    
+}
+
+console.log(message);
+
+let var1 = inp[0] 
+let var2 = inp[1] 
+
+console.log(parseFloat(var1 * var2))
+
+let name = kay 
+
+
+
+
 
