@@ -376,6 +376,18 @@ console.log(total);
 let split = total / numPeople;
 console.log(split);
 
+let tipamount = (tipPercentage / 100) * billAmount;
+let total = billAmount + tipamount;
+let split = total / numPeople;
+console.log("Bill Split Calculator");
+console.log(`Total (including tip): $${total}`);
+console.log(`Each person pays: $${split}`);
+
+for (let i = 3; i < 28; i++) {
+   console.log(`Hello Kay: ${i}`)
+}
+
+
 
 
 
