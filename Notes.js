@@ -387,9 +387,40 @@ for (let i = 3; i < 28; i++) {
    console.log(`Hello Kay: ${i}`)
 }
 
+//  loop learning 
+let number = 2;
 
+// while loop
+while (number >= 3.5) {
+    number = number / 2;
+}
 
+console.log(number);
 
+// break stopping a loop 
+for (let i = 1; i <= 20; i++) {
+    if (i == 9) {
+        break;
+    }console.log(i);
+}
+// picking even number or speciific numbers 
+for (let i = 1; i <= 20; i++) {
+   if (i % 2 !== 0) {
+    continue;
+   }  console.log(i);
+}
 
+//% means "remainder after division".
+//i % 2:
+//1 % 2 → 1 (odd)
+//2 % 2 → 0 (even)
+//3 % 2 → 1 (odd)
+//4 % 2 → 0 (even)
+
+//Operator	Meaning	Example
+//===	Equal value and type	5 === 5 → true
+//!==	Not equal value or type	5 !== "5" → true
+//==	Equal after type conversion	5 == "5" → true
+//!=	Not equal after type conversion	5 != "5" → false
 
 
