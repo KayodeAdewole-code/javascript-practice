@@ -423,4 +423,60 @@ for (let i = 1; i <= 20; i++) {
 //==	Equal after type conversion	5 == "5" → true
 //!=	Not equal after type conversion	5 != "5" → false
 
+// factorial loop Factorial is a mathematical operation. Factorial of n is the product of all positive integers less than or equal to n. For example:
+//Factorial of 3 is 6, which can be calculated as 1 * 2 * 3
+//Factorial of 6 is 720, which can be calculated as 1 * 2 * 3 * 4 * 5 * 6
+//Factorial of 2 is 2, which can be calculated as 1 * 2
+
+let n = parseInt(inp);
+let res = 1
+for (let i = 1; i <= n; i++) {
+    res *= i 
+} 
+console.log(res);
+// do.. while loop 
+let count = 5;
+do {
+    console.log(count);
+    count--;
+} while ( count > 0 ) // this code counts down from 5 
+
+let count = 0;
+
+while (count < 10) {
+    console.log(count);
+    count += 2;
+} // this code would add up 2 at a time 
+
+let count = 10;
+
+while (count > 0) {
+    console.log(count);
+    count--;
+} // this code counts down from 10 to 1
+
+let count = 1;
+
+while (count < 100) {
+    console.log(count);
+    count *= 2;
+} // this code multiplies the count by 2 
+
+let count = 100;
+
+while (count >= 1) {
+    console.log(count);
+    count /= 2;
+}// this code divides the count by 2
+
+let n = parseInt(inp); // Don't change this line
+
+// nested loop need much more practice still dont really understand 
+for (let i = 1; i < n; i++) {
+    for (let j = 1; j < n; j++) {
+        if (i + j === n) {
+            console.log(i, j);
+        }
+    }
+}
 
