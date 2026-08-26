@@ -485,3 +485,68 @@ for (let x = 1; x <= 3; x++) {
     }
 }
 
+
+const randomNum = Math.random();
+console.log(randomNum);
+
+
+const min = 1;
+const max = 100;
+
+const randomNum2 = Math.random() * (max - min) + min;
+console.log(randomNum2);
+
+
+const numRoundedDown = Math.floor(6.7);
+console.log(numRoundedDown);
+
+console.log("Now, generate a random integer between two values.");
+
+const randomInt = Math.floor(Math.random() * (max - min) + min);
+console.log(randomInt);
+
+
+
+const numRoundedUp = Math.ceil(3.2);
+console.log(numRoundedUp);
+
+
+
+const numRounded = Math.round(2.7);
+console.log(numRounded);
+const numRounded2 = Math.round(11.2);
+console.log(numRounded2);
+
+
+
+const maxNum = Math.max(3, 125, 55, 24);
+console.log(maxNum);
+const minNum = Math.min(6, 90, 14, 90, 2);
+console.log(minNum);
+
+let fortune1 = "Your cat will look very cuddly today.";
+
+let fortune2 = "The weather will be nice tomorrow.";
+
+let fortune3 = "Be cautious of your new neighbors.";
+
+let fortune4 = "You will find a new hobby soon.";
+
+let fortune5 = "It would be wise to avoid the color red today.";
+
+let randomNumber = Math.floor(Math.random() * 5) + 1;
+
+let selectedFortune;
+
+if (randomNumber === 1) {
+  selectedFortune = fortune1;
+} else if (randomNumber === 2) {
+  selectedFortune = fortune2;
+} else if (randomNumber === 3) {
+  selectedFortune = fortune3; 
+} else if (randomNumber === 4) {
+  selectedFortune = fortune4;
+} else if (randomNumber === 5) {
+  selectedFortune = fortune5;
+}
+console.log(selectedFortune);
