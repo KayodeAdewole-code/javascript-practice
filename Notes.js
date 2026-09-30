@@ -551,6 +551,8 @@ if (randomNumber === 1) {
 }
 console.log(selectedFortune);
 
+// functions different  ways to write functions
+
 function calculateSum(num1, num2) {
   return num1 + num2;
 }
@@ -650,3 +652,177 @@ function cardCounter(card) {
   }
   
   } 
+
+  let year = 0
+function isLeapYear(year) { if (year % 4 === 0 && (year % 100 !== 0 || year % 400 === 0 )) {
+  return `${year} is a leap year.`
+} else {
+ return `${year} is not a leap year.`
+}}
+
+let result = isLeapYear(year)
+console.log(result)
+
+// leap year function 
+
+function truncateString(string, number) {
+if (string.length > number) {
+  return string.slice(0, number) + `...`
+} else {
+  return string;
+}
+}
+// . lenth and . slice method used with functions need better understanding on the different uses and how to spot better 
+
+function confirmEnding(stringA, stringB) { if (stringA.slice(-stringB.length) === stringB) {
+  return true
+} else {
+  return false
+}
+
+} 
+// further using substring and slice methods with functions 
+
+// You can add or remove elements from an array using various array methods, such as push(), pop(), shift(), unshift(), splice()
+// this is for the new array part of the notes 
+//The push() method is used to add one or more elements to the end of an array. The return value for the push() method is the new length of the array.
+// example 
+const fruits = ["apple", "banana"];
+const newLength = fruits.push("orange");
+console.log(newLength); // 3
+console.log(fruits); // ["apple", "banana", "orange"]
+
+//The next method we will look at is the pop() method. The pop() method removes the last element from an array and returns that element
+// example
+let fruits = ["apple", "banana", "orange"];
+let lastFruit = fruits.pop();
+console.log(fruits); // ["apple", "banana"]
+console.log(lastFruit); // "orange"
+
+//The unshift() method adds one or more elements to the beginning of an array and returns its new length. 
+
+//Finally, the shift() method removes the first element from an array and returns that element.
+//similar to pop() but from the beginning
+
+//Now, let's discuss the rest syntax, denoted by three dots (...). It allows you to capture the remaining elements of an array that haven’t been destructured into a new array
+// example
+let fruits = ["apple", "banana", "orange", "mango", "kiwi"];
+let [first, second, ...rest] = fruits;
+
+console.log(first);  // "apple"
+console.log(second); // "banana"
+console.log(rest);   // ["orange", "mango", "kiwi"]
+
+// The split() method divides a string into an array of substrings and specifies where each split should happen based on a given separator
+// example
+let str = "hello";
+let charArray = str.split("");
+console.log(charArray); // ["h", "e", "l", "l", "o"]
+
+//The reverse() method is an array method that reverses the elements of an array in place. This means it modifies the original array rather than creating a new one. Here's how we can use it:
+// example
+let charArray = ["h", "e", "l", "l", "o"];
+charArray.reverse();
+console.log(charArray); // ["o", "l", "l", "e", "h"]
+
+//The final step is to convert the reversed array of characters back into a string. We can accomplish this using the join() method
+// example
+let reversedArray = ["o", "l", "l", "e", "h"];
+let reversedString = reversedArray.join("");
+console.log(reversedString); // "olleh"
+
+//all put into practice 
+console.log("Grocery shopping list");
+
+const shoppingList = [];
+
+console.log("It will be nice to have some fruit to eat.");
+
+shoppingList.push("Apples");
+
+function getShoppingListMsg(arr) {
+  return `Current Shopping List: ${arr}`;
+}
+
+console.log(getShoppingListMsg(shoppingList));
+
+shoppingList.push("Grapes");
+console.log(getShoppingListMsg(shoppingList));
+
+console.log("It looks like we need to get some cooking oil.");
+
+shoppingList.unshift("Vegetable Oil");
+console.log(getShoppingListMsg(shoppingList));
+
+shoppingList.push("Popcorn", "Beef Jerky", "Potato Chips");
+console.log(getShoppingListMsg(shoppingList));
+
+console.log("This looks like too much junk food.");
+
+shoppingList.pop();
+console.log(getShoppingListMsg(shoppingList));
+
+console.log("It might be nice to get a dessert.");
+
+shoppingList.unshift("Chocolate Cake");
+console.log(getShoppingListMsg(shoppingList));
+
+console.log("On second thought, maybe we should be more health conscious.");
+
+shoppingList.shift();
+shoppingList[0] = "Canola Oil";
+
+console.log(getShoppingListMsg(shoppingList));
+
+// mixing in functions with arrays and array langauges.
+let lunches = [];
+function addLunchToEnd (lunches,str){
+lunches.push(str);
+console.log(`${str} added to the end of the lunch menu.`)
+return lunches;
+}
+
+function addLunchToStart (lunches,str){
+ lunches.unshift(str)
+  console.log(`${str} added to the start of the lunch menu.`)
+  return lunches;
+}
+
+function removeLastLunch (lunches){if(lunches.length === 0) {
+  console.log("No lunches to remove.")
+} else {
+ let removedLunch = lunches.pop();
+ console.log(`${removedLunch} removed from the end of the lunch menu.`)
+ 
+}
+return lunches;
+}
+
+function removeFirstLunch (lunches){if(lunches.length === 0) {
+  console.log("No lunches to remove.")
+} else {
+  let removedLunch = lunches.shift();
+  console.log(`${removedLunch} removed from the start of the lunch menu.`)
+  
+}
+return lunches;
+}
+
+function getRandomLunch (lunches){ 
+  if (lunches.length === 0) {
+    console.log("No lunches available.");
+  } else {
+    let randomLunch = lunches[Math.floor(Math.random() * lunches.length)];
+    console.log(`Randomly selected lunch: ${randomLunch}`);
+  }
+return lunches;
+}
+
+function showLunchMenu (lunches){
+  if (lunches.length > 0){
+    console.log(`Menu items: ${lunches.join(", ")}`)
+  } else {
+    console.log("The menu is empty.")
+  }
+  return lunches;
+}
