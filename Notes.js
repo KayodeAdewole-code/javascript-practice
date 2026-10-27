@@ -826,3 +826,123 @@ function showLunchMenu (lunches){
   }
   return lunches;
 }
+// golf score function
+const names = ["Hole-in-one!", "Eagle", "Birdie", "Par", "Bogey", "Double Bogey", "Go Home!"];
+
+function golfScore (parr,strokes){
+  if(strokes === 1){
+    return names[0];
+  } else if(strokes <= parr - 2){
+    return names[1];
+  } else if(strokes === parr - 1 ){
+    return names[2]
+  } else if(strokes === parr){
+    return names[3]
+  } else if(strokes === parr + 1){
+    return names[4]
+  } else if(strokes === parr + 2){
+    return names[5]
+  } else if(strokes >= parr + 3){
+    return names[6]
+  }
+}
+
+// learing deeper on objects 
+// example of an object of contact information
+let person = {
+  name: "Alice",
+  age: 30,
+  contact: {
+    email: "alice@example.com",
+    phone: {
+      home: "123-456-7890",
+      work: "098-765-4321"
+    }
+  }
+};
+// accesses properties in 2 different ways
+console.log(person.contact.phone.work); // "098-765-4321"
+console.log(person["contact"]["phone"]["work"]); // "098-765-4321"
+
+// object with address 
+const person = {
+  name: "Alice",
+  age: 30,
+  addresses: [
+    { type: "home", street: "123 Main St", city: "Anytown" },
+    { type: "work", street: "456 Market St", city: "Workville" }
+  ]
+};
+// Accessing the street of the work address
+console.log(person.addresses[1].street); // "456 Market St"
+
+// functitions with objects also knows as object methods
+const person = {
+    name: "Bob",
+    age: 30,
+    sayHello: function() {
+        return "Hello, my name is " + this.name;
+    }
+};
+
+console.log(person.sayHello()); // "Hello, my name is Bob"
+
+// objects using functions and learing bracket notation 
+const tiger = {
+  species: "Tiger",
+  age: 5,
+  isEndangered: true
+};
+
+const elephant = {
+  species: "Elephant",
+  age: 10,
+  isEndangered: true
+};
+
+const getSpecies = (animal) => {
+  return animal.species;
+};
+
+console.log(getSpecies(tiger));
+
+const getAge = (animal) => {
+  return animal.age;
+};
+
+console.log(getAge(tiger));
+
+const addHabitat = (animal, habitat) => {
+  animal.habitat = habitat;
+  return animal;
+};
+
+console.log(addHabitat(tiger, "Rainforest"));
+
+const updateAge = (animal, newAge) => {
+  animal.age = newAge;
+  return animal;
+};
+
+console.log(updateAge(elephant, 12));
+
+const removeEndangeredStatus = (animal) => {
+  delete animal.isEndangered;
+  return animal;
+};
+
+console.log(removeEndangeredStatus(tiger));
+
+const hasHabitat = (animal) => {
+  return animal.hasOwnProperty("habitat");
+};
+
+console.log(hasHabitat(tiger));
+console.log(hasHabitat(elephant));
+
+function getProperty(animal, propertyName){
+  return animal[propertyName];
+};
+
+console.log(getProperty(tiger, "species"));
+console.log(getProperty(elephant, "age"));
