@@ -946,3 +946,53 @@ function getProperty(animal, propertyName){
 
 console.log(getProperty(tiger, "species"));
 console.log(getProperty(elephant, "age"));
+
+//{ ...manifest } copies all the properties into a brand new object, so the original is never changed. THIS IS IMPORTANT TO KNOW.
+
+function normalizeUnits(manifest) {
+  if (manifest.unit === "lb") {
+    return {
+      ...manifest, 
+      weight: manifest.weight * 0.45,
+      unit: "kg",
+    };
+  }
+  return {...manifest, unit: "kg"};
+}
+
+function validateManifest(manifest) {
+  let rules = {
+    containerId: (v) => Number.isInteger(v) && v > 0,
+    destination: (v) => typeof v === "string" && v.trim() !== "",
+    weight: (v) => typeof v === "number" && v > 0,
+    unit: (v) => v === "kg" || v === "lb",
+    hazmat: (v) => typeof v === "boolean",
+  };
+
+  let errors = {};
+
+  for (let key in rules) {
+    if (manifest[key] === undefined) {
+      errors[key] = "Missing";
+    } else if (!rules[key](manifest[key])) {
+      errors[key] = "Invalid";
+    }
+  }
+
+  return errors;
+}
+
+function processManifest(manifest) {
+ let errors = validateManifest(manifest);
+
+ if (Object.keys(errors).length === 0) {
+  let normalized = normalizeUnits(manifest);
+  console.log(`Validation success: ${manifest.containerId}`);
+  console.log(`Total weight: ${normalized.weight} kg`);
+ } else {
+  console.log(`Validation error: ${manifest.containerId}`)
+  console.log(errors);
+ }
+} 
+
+// building a manifest object also using functions to validate and normalize the data.
