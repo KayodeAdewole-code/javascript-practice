@@ -996,3 +996,105 @@ function processManifest(manifest) {
 } 
 
 // building a manifest object also using functions to validate and normalize the data.
+
+// JSON coding that can translate to Python and other languages. 
+{
+  "name": "Alice",
+  "age": 30,
+  "isStudent": false,
+  "list of courses": ["Mathematics", "Physics", "Computer Science"]
+} // example of a JSON object 
+
+// JSON.stringify() is used to convert a JavaScript object into a JSON string.
+// example
+const user = {
+  name: "John",
+  age: 30,
+  isAdmin: true
+};
+
+const jsonString = JSON.stringify(user);
+console.log(jsonString);
+
+// ccepts an optional parameter called a replacer, which can be a function or an array.
+// example
+
+const developerObj = {
+  firstName: "Jessica",
+  isAwesome: true,
+  isMusician: true,
+  country: "USA",
+};
+
+// result: {"firstName":"Jessica","country":"USA"}
+console.log(JSON.stringify(developerObj, ["firstName", "country"]));
+
+// JSON.parse() is used to convert a JSON string back into a JavaScript object. usefull when using local storage 
+// example
+const jsonString = '{"name":"John","age":30,"isAdmin":true}';
+const userObject = JSON.parse(jsonString);
+console.log(userObject);
+
+// Result:
+// { name: 'John', age: 30, isAdmin: true }
+
+// building a recipe tracker using arrays and objects and functions to track the recipes and ingredients.
+
+const recipes = [];
+
+const recipe1 = {
+  name: "Spaghetti Carbonara",
+  ingredients: ["spaghetti", "Parmesan cheese", "pancetta", "black pepper"],
+  cookingTime: 22,
+  totalIngredients: null,
+  difficultyLevel: ""
+};
+
+const recipe2 = {
+  name: "Chicken Curry",
+  ingredients: ["chicken breast", "coconut milk", "curry powder", "onion", "garlic"],
+  cookingTime: 42,
+  totalIngredients: null,
+  difficultyLevel: ""
+};
+
+const recipe3 = {
+  name: "Vegetable Stir Fry",
+  ingredients: ["broccoli", "carrot", "bell pepper"],
+  cookingTime: 15,
+  totalIngredients: null,
+  difficultyLevel: ""
+};
+
+recipes.push(recipe1, recipe2, recipe3);
+
+function getTotalIngredients(ingredients) {
+  return ingredients.length;
+}
+
+function getDifficultyLevel(cookingTime) {
+  if (cookingTime <= 30) {
+    return "easy";
+  } else if (cookingTime <= 60) {
+    return "medium";
+  } else {
+    return "hard";
+  }
+}
+
+const recipe1TotalIngredients = getTotalIngredients(recipe1.ingredients);
+console.log(recipe1TotalIngredients);
+
+const recipe1DifficultyLevel = getDifficultyLevel(recipe1.cookingTime);
+console.log(recipe1DifficultyLevel);
+
+recipe1.totalIngredients = getTotalIngredients(recipe1.ingredients);
+recipe1.difficultyLevel = getDifficultyLevel(recipe1.cookingTime);
+
+recipe2.totalIngredients = getTotalIngredients(recipe2.ingredients);
+recipe2.difficultyLevel = getDifficultyLevel(recipe2.cookingTime);
+
+recipe3.totalIngredients = getTotalIngredients(recipe3.ingredients);
+recipe3.difficultyLevel = getDifficultyLevel(recipe3.cookingTime);
+
+console.log(recipes)
