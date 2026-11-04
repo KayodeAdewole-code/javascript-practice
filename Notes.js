@@ -1098,3 +1098,51 @@ recipe3.totalIngredients = getTotalIngredients(recipe3.ingredients);
 recipe3.difficultyLevel = getDifficultyLevel(recipe3.cookingTime);
 
 console.log(recipes)
+
+// buzzquiz game using objects and arrays and functions to track the questions and answers. continuation of the recipe tracker 
+
+let questions = [
+  {category: "Geography", question: "What is the capital of england?", choices:["London", "Coventry", "Manchester"], answer: "London"},{
+  category: "Football",
+  question: "Which club does Cole Palmer play for?",
+  choices: ["Chelsea", "Arsenal", "Spurs"],
+  answer: "Chelsea"
+},
+{
+  category: "Science",
+  question: "Which planet is closest to the Sun?",
+  choices: ["Venus", "Mercury", "Mars"],
+  answer: "Mercury"
+},
+{
+  category: "Geography",
+  question: "What is the capital of France?",
+  choices: ["Paris", "Madrid", "Rome"],
+  answer: "Paris"
+},
+{
+  category: "Maths",
+  question: "What is 12 multiplied by 12?",
+  choices: ["124", "144", "154"],
+  answer: "144"
+}
+];
+
+function getRandomQuestion(questions) {
+  return questions[Math.floor(Math.random() * questions.length)];
+};
+
+function getRandomComputerChoice(choices) {
+ return choices[Math.floor(Math.random() * choices.length)];
+}
+
+let selectedQuestions = getRandomQuestion(questions);
+let computerChoice = getRandomComputerChoice(selectedQuestions.choices);
+
+function getResults(question, computerChoice) {
+  if (computerChoice === question.answer) {
+    return "The computer's choice is correct!";
+  } else {
+    return `The computer's choice is wrong. The correct answer is: ${question.answer}`;
+  }
+}
